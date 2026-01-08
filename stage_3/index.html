@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Image gallery</title>
+      <link rel="stylesheet" href="styles/styles.css" />
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <form class="form">
+               <label for="image-name">Image name:</label>
+               <input type="text" id="image-name" name="image-name" required />
+
+               <label for="image-file">Select image:</label>
+               <input
+                  type="file"
+                  id="image-file"
+                  name="image-file"
+                  accept="image/*"
+                  required
+               />
+
+               <button type="submit" class="upload-button">
+                  Add to gallery
+               </button>
+            </form>
+         </header>
+
+         <main class="main">
+            <section class="images-list">
+               <div class="images-list-container"></div>
+               <button class="up-button">↑</button>
+            </section>
+
+            <div class="resize-bar"></div>
+
+            <section class="image-preview">
+               <button class="close-button">╳</button>
+               <div class="image-preview-container"></div>
+               <div class="preview-navigation">
+                  <button class="prev-button">←</button>
+                  <button class="next-button">→</button>
+               </div>
+            </section>
+         </main>
+
+         <span class="card-coords"></span>
+      </div>
+
+      <script src="scripts/script.js"></script>
+   </body>
+</html>
